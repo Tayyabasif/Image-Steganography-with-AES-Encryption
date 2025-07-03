@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Popppins", sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0171d3;
+}
+
+.form{
+    max-width: 430px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    background-color: white;
+}
+
+header{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#invalid-param{
+	margin-top: 15px;
+	color: red;
+	font-weight: 400;
+	text-align: center;
+}
+
+#logout-message{
+	margin-top: 15px;
+	color: green;
+	font-weight: 400;
+	text-align: center;
+}
+
+form{
+    margin-top: 30px;
+}   
+
+.form .field{
+    position: relative;
+    height: 45px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.field button,
+.field input{
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.field input{
+    padding: 0 10px;
+    border: 1px solid #CACACA;
+}
+
+.field input:focus{
+    border-bottom-width: 2px;
+}
+
+.fa-regular.fa-eye-slash{
+    position: absolute;
+    top: 35%;
+    right: 10px;
+    font-size: 18px;
+    color: grey;
+    cursor: pointer;
+}
+
+.fa-regular.fa-eye{
+    position: absolute;
+    top: 35%;
+    right: 10px;
+    font-size: 18px;
+    color: grey;
+    cursor: pointer;
+}
+
+.field button{
+    background-color: #0171d3;
+    color: #FFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-link{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-link a{
+    color: #0171d3;
+    text-decoration: none;
+}
+
+.form-link a:hover{
+    text-decoration: underline;
+}
+
+.line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background-color: #d4d4d4;
+    margin: 30px 0px;
+}
+
+.line span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFF;
+    padding: 0 15px;
+    
+}
+
+
+
+.media-options a{
+    color: #0171d3;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-img{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+a.google{
+    border: 1px solid #CACACA;
+}

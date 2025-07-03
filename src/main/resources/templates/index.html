@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Encrypt Text Into An Image</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="" th:href="@{/css/style.css}">
+    <script src="" th:src="@{/js/script.js}" defer></script>
+
+</head>
+
+
+<form action="/start" method="post" enctype="multipart/form-data">
+<div id="sidebar">
+        <img src="images/pngegg.png" alt="" id="main-image">
+
+        <label class="label" for="inputimg">
+            <img class="logo" src="images/diskette.png" alt=""> 
+            Select Image</label>
+        <ul>
+            <li><input type="file"  id="inputimg" name="imageFile" accept="image/*"></li>
+             
+            <li>
+                <img class="logo" src="images/2849815_download_multimedia_file_document_icon.png" alt="">
+                <a id="download" href="#" download="">Save Image</a></li>
+            <li> <a href="" th:href="@{/logout}" id="logout">Logout</a></li>
+        </ul> 
+    </div>
+
+
+    <div class="form-container">
+        <div>
+            <div id="data">
+
+                <label class="label" for="message-box">
+                   <img class="logo" src="images/email.png" alt=""> 
+                    Message</label>
+                <textarea th:text="${message}" name="message" id="message-box" rows="12" cols="28"></textarea><br>
+                <label class="label" for="password">
+                    <img class="logo" src="images/padlock.png" alt=""> Password
+                    <button type="button" id="clear"><img id="binm" src="images/recycle-bin.png" alt=""></button>
+                <button type="button" id="copy"><img id="clearm" src="images\copy-and-paste-or-duplicate-file-21642.png" alt=""></button>
+                   </label>
+
+                
+                
+                <div id="password-manager">
+                    <input type="password"  id="password" name="password">
+                    <img id="eyeicon" src="images/eyeclose.png" alt="">
+                </div>
+            </div>
+
+            <div id="methods">
+                <label for="encryption">Encryption:</label>
+                <label for="process" id="process-label">Process:</label><br>
+                <select id="encryption" name="encryption">
+                <option value="AES" selected>AES</option>
+                <option value="DES">DES</option>
+                </select>
+        
+                
+                <select id="process" name="process">
+                    <option value="Encrypt" selected>Encrypt</option>
+                    <option value="Decrypt">Decrypt</option>
+                </select>
+  
+            </div>
+
+                
+                    
+                    <button id="submit">
+                        <img src="images/play-button.png" alt="" class="logo">
+                        Start</button>
+
+                    <button type="reset" id="reset">
+                        <img src="images/recycle-bin.png" alt="" class="logo">
+                        Clear</button>
+                
+        </div>
+
+                <div id="display">
+                    
+                    <label class="label" for="inner-display">
+                        <img src="images/image.png" alt="" class="logo">
+                        Image</label>
+                    <div id="inner-display">
+                    </div>
+                        
+                </div>
+     </div>
+
+</form>
+
+</body>
+</html>

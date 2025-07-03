@@ -1,0 +1,51 @@
+# Java build files
+/target/
+/build/
+
+# Maven
+.mvn/
+!**/src/main/**/maven-wrapper.jar
+**/mvnw
+**/mvnw.cmd
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+**/gradlew
+**/gradlew.bat
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Environment-specific files
+.env
+*.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# OAuth config (assuming it's in properties/yml)
+src/main/resources/application.properties
+src/main/resources/application.yml
+
+# Optional: keep a template config file for others
+!src/main/resources/application-template.properties
+!src/main/resources/application-template.yml

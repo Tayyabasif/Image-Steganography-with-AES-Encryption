@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Signup</title>
+
+<script src="https://kit.fontawesome.com/252bd910c5.js" crossorigin="anonymous"></script>   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="" th:href="@{/css/loginstyle.css}">
+    <script src="" th:src="@{/js/signupscript.js}" defer></script>
+</head>
+<body>
+<section class="container forms">
+        <div class="form signup">
+            <header>Signup</header>
+            
+             <div id="invalid-param" th:if="${errorMsg}">
+			User not registered</div>
+		<div id="logout-message" th:if="${successMsg}">
+			User registered successfully</div>
+            
+            <div class="form-data">
+                <form id="signup-form" method="post" action="" th:action="@{/register}">
+                    <div class="field input-field">
+                        <input type="email" name="email" id="" placeholder="Email">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" id="pass" placeholder="Password">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" name="userPassword" class="password" placeholder="Confirm Password">
+
+                        <i class="fa-regular fa-eye-slash"></i>
+                    </div>
+
+                    <div class="field button-field">
+                        <button class="button">Signup</button>
+                    </div>
+
+                    <div class="form-link">
+                        <Span>Already have an account?<a href="" th:href="@{/login}"> Login</a></Span>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
